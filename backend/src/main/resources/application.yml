@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: backend
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=zentra;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: YourStrong@Passw0rd
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop #TODO: only for development
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.SQLServerDialect
